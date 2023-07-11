@@ -1,0 +1,157 @@
+[gd_scene load_steps=10 format=3 uid="uid://c38ya1cpcilx3"]
+
+[ext_resource type="Texture2D" uid="uid://rqldw7lgwnof" path="res://addons/alignment-tool/icons/HLeft.svg" id="1_nddj3"]
+[ext_resource type="Script" path="res://addons/alignment-tool/AlignToolButton.gd" id="2_eyynw"]
+[ext_resource type="Texture2D" uid="uid://ct3bkj2w3a43o" path="res://addons/alignment-tool/icons/HCenter.svg" id="3_tljn4"]
+[ext_resource type="Texture2D" uid="uid://dcbwpxek7jj3m" path="res://addons/alignment-tool/icons/HRight.svg" id="4_5o8fk"]
+[ext_resource type="Texture2D" uid="uid://dwjfhrikfvudf" path="res://addons/alignment-tool/icons/HSpace.svg" id="5_0exq5"]
+[ext_resource type="Texture2D" uid="uid://b6hpk13503wg6" path="res://addons/alignment-tool/icons/VBottom.svg" id="6_o3vd2"]
+[ext_resource type="Texture2D" uid="uid://bhlbv8nmrxkho" path="res://addons/alignment-tool/icons/VCenter.svg" id="7_hldas"]
+[ext_resource type="Texture2D" uid="uid://bd75uukdpw4ff" path="res://addons/alignment-tool/icons/VTop.svg" id="8_7i817"]
+[ext_resource type="Texture2D" uid="uid://bggdatiph18bk" path="res://addons/alignment-tool/icons/VSpace.svg" id="9_uex0k"]
+
+[node name="AlignToolButton" type="Button"]
+texture_filter = 1
+offset_right = 24.0
+offset_bottom = 24.0
+toggle_mode = true
+button_pressed = true
+icon = ExtResource("1_nddj3")
+flat = true
+script = ExtResource("2_eyynw")
+
+[node name="Popup" type="PopupPanel" parent="."]
+position = Vector2i(0, 24)
+size = Vector2i(164, 236)
+visible = true
+
+[node name="VBox" type="VBoxContainer" parent="Popup"]
+texture_filter = 1
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 160.0
+offset_bottom = 232.0
+
+[node name="AlignX" type="VBoxContainer" parent="Popup/VBox"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Popup/VBox/AlignX"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Popup/VBox/AlignX/Header"]
+layout_mode = 2
+text = "X Axis"
+
+[node name="HSep" type="HSeparator" parent="Popup/VBox/AlignX/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBox" type="HBoxContainer" parent="Popup/VBox/AlignX"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="X_MIN" type="Button" parent="Popup/VBox/AlignX/HBox"]
+layout_mode = 2
+icon = ExtResource("1_nddj3")
+flat = true
+
+[node name="X_CENTER" type="Button" parent="Popup/VBox/AlignX/HBox"]
+layout_mode = 2
+icon = ExtResource("3_tljn4")
+flat = true
+
+[node name="X_MAX" type="Button" parent="Popup/VBox/AlignX/HBox"]
+layout_mode = 2
+icon = ExtResource("4_5o8fk")
+flat = true
+
+[node name="VSep" type="VSeparator" parent="Popup/VBox/AlignX/HBox"]
+layout_mode = 2
+
+[node name="X_SPACE" type="Button" parent="Popup/VBox/AlignX/HBox"]
+layout_mode = 2
+icon = ExtResource("5_0exq5")
+flat = true
+
+[node name="AlignY" type="VBoxContainer" parent="Popup/VBox"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Popup/VBox/AlignY"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Popup/VBox/AlignY/Header"]
+layout_mode = 2
+text = "Y Axis"
+
+[node name="HSep" type="HSeparator" parent="Popup/VBox/AlignY/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBox" type="HBoxContainer" parent="Popup/VBox/AlignY"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Y_MIN" type="Button" parent="Popup/VBox/AlignY/HBox"]
+layout_mode = 2
+icon = ExtResource("6_o3vd2")
+flat = true
+
+[node name="Y_CENTER" type="Button" parent="Popup/VBox/AlignY/HBox"]
+layout_mode = 2
+icon = ExtResource("7_hldas")
+flat = true
+
+[node name="Y_MAX" type="Button" parent="Popup/VBox/AlignY/HBox"]
+layout_mode = 2
+icon = ExtResource("8_7i817")
+flat = true
+
+[node name="VSep" type="VSeparator" parent="Popup/VBox/AlignY/HBox"]
+layout_mode = 2
+
+[node name="Y_SPACE" type="Button" parent="Popup/VBox/AlignY/HBox"]
+layout_mode = 2
+icon = ExtResource("9_uex0k")
+flat = true
+
+[node name="AlignZ" type="VBoxContainer" parent="Popup/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="HBoxContainer" parent="Popup/VBox/AlignZ"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Popup/VBox/AlignZ/Header"]
+layout_mode = 2
+text = "Z Axis"
+
+[node name="HSep" type="HSeparator" parent="Popup/VBox/AlignZ/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBox" type="HBoxContainer" parent="Popup/VBox/AlignZ"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Z_MIN" type="Button" parent="Popup/VBox/AlignZ/HBox"]
+layout_mode = 2
+icon = ExtResource("1_nddj3")
+flat = true
+
+[node name="Z_CENTER" type="Button" parent="Popup/VBox/AlignZ/HBox"]
+layout_mode = 2
+icon = ExtResource("3_tljn4")
+flat = true
+
+[node name="Z_MAX" type="Button" parent="Popup/VBox/AlignZ/HBox"]
+layout_mode = 2
+icon = ExtResource("4_5o8fk")
+flat = true
+
+[node name="VSep" type="VSeparator" parent="Popup/VBox/AlignZ/HBox"]
+layout_mode = 2
+
+[node name="Z_SPACE" type="Button" parent="Popup/VBox/AlignZ/HBox"]
+layout_mode = 2
+icon = ExtResource("5_0exq5")
+flat = true
